@@ -1,5 +1,5 @@
 import React from 'react';
-import type { PostFilterProps } from 'types/posts.porps.types';
+import type { PostFilterProps } from 'types/props/posts.porps.types';
 import styles from './PostFilter.module.scss';
 
 const PostFilter = (props: PostFilterProps) => {

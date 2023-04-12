@@ -1,4 +1,4 @@
-import { User } from './user.types';
+import { User } from '../entity/user.types';
 
 export interface SearchParams {
   userId?: User['id'];

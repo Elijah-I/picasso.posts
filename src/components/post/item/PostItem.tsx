@@ -1,5 +1,5 @@
 import React from 'react';
-import type { PostItemProps } from 'types/posts.porps.types';
+import type { PostItemProps } from 'types/props/posts.porps.types';
 import styles from './PostItem.module.scss';
 
 const PostItem = (props: PostItemProps) => {

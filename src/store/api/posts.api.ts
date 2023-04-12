@@ -1,4 +1,4 @@
-import { api } from 'store/api/api';
+import { api } from 'store/root/api';
 import type { GetPostsResponse, GetPostsRequest } from 'types/api/posts.api.types';
 
 export const postsApi = api.injectEndpoints({

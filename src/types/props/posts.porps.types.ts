@@ -1,6 +1,6 @@
-import type { Post } from './post.types';
-import type { User } from './user.types';
-import type { SearchParams } from './search.params.types';
+import type { User } from 'types/entity/user.types';
+import type { Post } from 'types/entity/post.types';
+import type { SearchParams } from '../hooks/use.search.params.types';
 
 export interface PostFilterProps {
   authors: User[];

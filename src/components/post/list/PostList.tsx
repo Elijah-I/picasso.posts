@@ -1,6 +1,6 @@
 import React from 'react';
 import PostItem from '../item/PostItem';
-import type { PostListProps } from 'types/posts.porps.types';
+import type { PostListProps } from 'types/props/posts.porps.types';
 import styles from './PostList.module.scss';
 
 const PostList = (props: PostListProps) => {

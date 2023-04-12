@@ -1,5 +1,5 @@
 import { useSearchParams } from 'react-router-dom';
-import type { SearchParams, useCustomParamsReturn } from 'types/search.params.types';
+import type { SearchParams, useCustomParamsReturn } from 'types/hooks/use.search.params.types';
 
 export const useCustomParams = (): useCustomParamsReturn => {
   const [searchParams, setSearchParams] = useSearchParams();

@@ -5,7 +5,7 @@ import PostFilter from 'components/post/filter/PostFilter';
 import PostList from 'components/post/list/PostList';
 import WithLoader from 'HOC/WithLoader';
 import { useCustomParams } from 'hooks/useCustomParams';
-import type { SearchParams } from 'types/search.params.types';
+import type { SearchParams } from 'types/hooks/use.search.params.types';
 import styles from './Posts.module.scss';
 
 const Posts = () => {
