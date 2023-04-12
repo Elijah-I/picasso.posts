@@ -1,10 +1,10 @@
 import React from 'react';
 import { Loader } from 'components/loader/Loader';
-import type { LoaderProps } from 'types/props/loader.props.types';
+import type { WithLoaderProps } from 'types/props/loader.props.types';
 
-const WithLoader = (props: LoaderProps) => {
-  const { isLoading, children } = props;
-  return isLoading ? <Loader /> : <>{children}</>;
+const WithLoader = (props: WithLoaderProps) => {
+  const { isLoading, children, variant } = props;
+  return isLoading ? <Loader variant={variant} /> : <>{children}</>;
 };
 
 export default WithLoader;
