@@ -1,0 +1,26 @@
+@import '@/styles/abstracts/variables';
+@import '@/styles/abstracts/placeholders';
+
+.post {
+  @extend %container;
+
+  padding: $gap;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: $gap;
+
+  // .post__author
+  // .post__content
+  // .post__comments
+  &__author,
+  &__content,
+  &__comments {
+    padding: $gap;
+    background-color: $secondary-bg-color;
+    border-radius: $radius;
+  }
+
+  &__comments {
+    grid-column: 1 / 3;
+  }
+}

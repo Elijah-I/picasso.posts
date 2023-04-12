@@ -29,6 +29,14 @@
       color: $active-font-color;
     }
   }
+
+  // .header__close
+  &__close {
+    @extend %font-upper;
+    font-size: 3.5rem;
+    margin-left: auto;
+    cursor: pointer;
+  }
 }
 
 :global {

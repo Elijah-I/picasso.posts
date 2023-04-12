@@ -10,8 +10,8 @@ import styles from './Posts.module.scss';
 
 const Posts = () => {
   const [{ userId }, setCustomParams] = useCustomParams();
-  const { isLoading: isLoadingAuthors, data: authors } = authorsApi.useGetAuthorsQuery();
-  const { isLoading: isLoadingPosts, data: posts } = postsApi.useGetPostsQuery({ userId });
+  const { isFetching: isLoadingAuthors, data: authors } = authorsApi.useGetAuthorsQuery();
+  const { isFetching: isLoadingPosts, data: posts } = postsApi.useGetPostsQuery({ userId });
 
   const handleFilter = (params: SearchParams) => {
     setCustomParams(params);
@@ -19,8 +19,10 @@ const Posts = () => {
 
   return (
     <div className={styles.container}>
-      <WithLoader isLoading={isLoadingPosts || isLoadingAuthors}>
+      <WithLoader isLoading={isLoadingAuthors} variant="dark">
         <PostFilter userId={userId} authors={authors || []} onFilter={handleFilter} />
+      </WithLoader>
+      <WithLoader isLoading={isLoadingPosts} variant="dark">
         <PostList posts={posts || []} authors={authors || []} />
       </WithLoader>
     </div>

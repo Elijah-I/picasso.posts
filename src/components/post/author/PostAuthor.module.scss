@@ -1,0 +1,15 @@
+@import '@/styles/abstracts/variables';
+@import '@/styles/abstracts/placeholders';
+
+.author {
+  @extend %font;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  // .author a
+  a {
+    margin: 1rem 0 0 auto;
+  }
+}

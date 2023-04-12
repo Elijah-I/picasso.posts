@@ -1,9 +1,11 @@
 import React from 'react';
+import { NavLink, useNavigate, useParams } from 'react-router-dom';
 import styles from './Header.module.scss';
-import { NavLink } from 'react-router-dom';
 
 const Header = () => {
   const home = import.meta.env.BASE_URL;
+  const { id } = useParams();
+  const navigate = useNavigate();
 
   return (
     <div className={styles.header}>
@@ -14,6 +16,14 @@ const Header = () => {
         <NavLink to={`${home}/posts`} className={styles.header__link}>
           posts
         </NavLink>
+        {!!id && (
+          <div
+            onClick={() => navigate(-1)}
+            className={`${styles.header__link} ${styles.header__close}`}
+          >
+            ×
+          </div>
+        )}
       </div>
     </div>
   );
