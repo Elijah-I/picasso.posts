@@ -1,0 +1,20 @@
+@import '@/styles/abstracts/mixins';
+
+// bg colors
+$primary-bg-color: #e9ebec;
+$secondary-bg-color: #b2b8bb;
+
+// sizes
+:root {
+  --gap: 3rem;
+  --radius: 5rem;
+
+  @include media-mobile {
+    --gap: 2rem;
+    --radius: 3rem;
+  }
+}
+
+$gap: var(--gap);
+$radius: var(--radius);
+$max-width: 120rem;

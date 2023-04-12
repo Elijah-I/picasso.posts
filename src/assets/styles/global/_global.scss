@@ -1,0 +1,27 @@
+@import '@/styles/abstracts/mixins';
+@import '@/styles/abstracts/variables';
+@import '@/styles/abstracts/placeholders';
+
+html {
+  font-size: 10px;
+
+  @include media-mobile {
+    font-size: 8px;
+  }
+}
+
+body {
+  font: 400 1.6rem/1.6rem 'Roboto', sans-serif;
+  background-color: $primary-bg-color;
+  overflow: hidden overlay;
+}
+
+::-webkit-scrollbar {
+  width: 1.2rem;
+  background-color: $primary-bg-color;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba($secondary-bg-color, 0.75);
+  border-radius: 0.6rem;
+}
