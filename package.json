@@ -6,9 +6,10 @@
   "homepage": "https://elijah-i.github.io/picasso.posts/",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
+    "lint": "eslint src",
     "preview": "vite preview",
-    "deploy": "npm run build && npx gh-pages -d dist"
+    "build": "tsc && vite build",
+    "deploy": "npm run lint && npm run build && npx gh-pages -d dist"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.3",

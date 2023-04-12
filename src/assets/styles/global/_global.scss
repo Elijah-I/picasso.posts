@@ -25,3 +25,8 @@ body {
   background-color: rgba($secondary-bg-color, 0.75);
   border-radius: 0.6rem;
 }
+
+::-webkit-scrollbar-button:single-button:vertical:decrement {
+  height: 7.6rem;
+  background-color: $secondary-bg-color;
+}
