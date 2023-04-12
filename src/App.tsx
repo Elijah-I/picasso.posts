@@ -6,10 +6,10 @@ import {
   createRoutesFromElements,
 } from 'react-router-dom';
 
-import Main from './pages/Main';
-import Post from './pages/Post';
-import Posts from './pages/Posts';
-import Error from './pages/Error';
+import Main from './pages/main/Main';
+import Post from './pages/post/Post';
+import Posts from './pages/posts/Posts';
+import Error from './pages/error/Error';
 import Layout from './layout/Layout';
 
 import './assets/styles/app.scss';
