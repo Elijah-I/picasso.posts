@@ -14,12 +14,14 @@ import Layout from './layout/Layout';
 
 import './assets/styles/app.scss';
 
+const home = import.meta.env.BASE_URL;
+
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route path="/" element={<Layout />}>
+    <Route path={home} element={<Layout />}>
       <Route index element={<Main />} />
-      <Route path="/posts" element={<Posts />} />
-      <Route path="/posts/:id" element={<Post />} />
+      <Route path={`${home}/posts`} element={<Posts />} />
+      <Route path={`${home}/posts:id`} element={<Post />} />
       <Route path="*" element={<Error />} />
     </Route>
   )
