@@ -1,0 +1,39 @@
+@import '@/styles/abstracts/variables';
+@import '@/styles/abstracts/placeholders';
+
+.post {
+  @extend %font;
+
+  padding: $gap;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background-color: $secondary-bg-color;
+  border-radius: $radius;
+  cursor: pointer;
+  transition: box-shadow 0.2s ease;
+
+  &:hover {
+    box-shadow: 0 0 1rem 0 $primary-font-color;
+  }
+
+  // .post__header
+  &__header {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+  }
+
+  // .post__title
+  &__title {
+    @extend %font-upper-small;
+  }
+
+  // .post__author
+  &__author {
+    @extend %font-upper-small;
+
+    margin-left: auto;
+    opacity: 0.5;
+  }
+}

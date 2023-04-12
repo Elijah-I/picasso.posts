@@ -1,4 +1,5 @@
 import React from 'react';
+import { Provider } from 'react-redux';
 import {
   Route,
   RouterProvider,
@@ -11,6 +12,8 @@ import Post from './pages/post/Post';
 import Posts from './pages/posts/Posts';
 import Error from './pages/error/Error';
 import Layout from './layout/Layout';
+
+import { store } from 'store/store';
 
 import './assets/styles/app.scss';
 
@@ -28,7 +31,11 @@ const router = createBrowserRouter(
 );
 
 function App() {
-  return <RouterProvider router={router} />;
+  return (
+    <Provider store={store}>
+      <RouterProvider router={router} />;
+    </Provider>
+  );
 }
 
 export default App;

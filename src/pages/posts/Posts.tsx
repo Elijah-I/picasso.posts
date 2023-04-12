@@ -1,13 +1,20 @@
 import React from 'react';
-import styles from './Posts.module.scss';
+import { postsApi } from 'store/posts/posts.api';
 import PostFilter from 'components/post/filter/PostFilter';
 import PostList from 'components/post/list/PostList';
+import WithLoader from './../../HOC/WithLoader';
+import styles from './Posts.module.scss';
 
 const Posts = () => {
+  const { isLoading, data } = postsApi.useGetPostsQuery({});
+  const { posts, authors } = data || { posts: [], authors: [] };
+
   return (
     <div className={styles.container}>
-      <PostFilter />
-      <PostList />
+      <WithLoader isLoading={isLoading}>
+        <PostFilter authors={authors} />
+        <PostList posts={posts} />
+      </WithLoader>
     </div>
   );
 };

@@ -15,9 +15,8 @@
 
   // .header__link
   &__link {
-    @extend %font-upper;
+    @extend %font-upper-small;
 
-    font-size: 1.4rem;
     text-decoration: none;
     transition: color 0.2s ease;
 
