@@ -12,15 +12,18 @@
   // .post__author
   // .post__content
   // .post__comments
+  // .post__add_comment
   &__author,
   &__content,
-  &__comments {
+  &__comments,
+  &__add_comment {
     padding: $gap;
     background-color: $secondary-bg-color;
     border-radius: $radius;
   }
 
-  &__comments {
+  &__comments,
+  &__add_comment {
     grid-column: 1 / 3;
   }
 }

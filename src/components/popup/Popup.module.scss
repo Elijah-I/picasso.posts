@@ -1,0 +1,29 @@
+@import '@/styles/abstracts/variables';
+@import '@/styles/abstracts/placeholders';
+
+.notification,
+.exit,
+.exit_done,
+.exit_active,
+.enter,
+.enter_done,
+.enter_active {
+  @extend %font;
+
+  background-color: $positive-bg-color;
+  padding: $gap;
+  position: fixed;
+  top: -100%;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  z-index: 5;
+  border-radius: $radius;
+  will-change: top, opacity;
+  transition: top 0.3s ease, opacity 0.3s ease;
+}
+.enter_done,
+.enter_active {
+  opacity: 1;
+  top: $gap;
+}

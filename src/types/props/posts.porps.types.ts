@@ -30,3 +30,7 @@ export interface PostAuthorProps {
 export interface PostCommentsProps {
   comments: Comment[] | undefined;
 }
+
+export interface AddPostCommentProps {
+  postId: Post['id'];
+}
