@@ -7,3 +7,10 @@
   max-width: $max-width;
   box-sizing: border-box;
 }
+
+%font-upper {
+  font-size: 2.2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: $primary-font-color;
+}
