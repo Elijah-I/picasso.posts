@@ -1,0 +1,9 @@
+@import '@/styles/abstracts/variables';
+
+.filter {
+  padding: $gap 0;
+  display: flex;
+  justify-content: flex-end;
+  gap: $gap;
+  border-bottom: 1px dotted $secondary-bg-color;
+}
