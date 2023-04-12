@@ -22,7 +22,7 @@ const Posts = () => {
       <WithLoader isLoading={isLoadingAuthors} variant="dark">
         <PostFilter userId={userId} authors={authors || []} onFilter={handleFilter} />
       </WithLoader>
-      <WithLoader isLoading={isLoadingPosts} variant="dark">
+      <WithLoader isLoading={isLoadingPosts || isLoadingAuthors} variant="dark">
         <PostList posts={posts || []} authors={authors || []} />
       </WithLoader>
     </div>

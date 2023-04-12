@@ -42,6 +42,7 @@ const Post = () => {
         <div className={styles.post__comments}>
           <WithLoader isLoading={isLoadingComments} variant="light">
             <PostComments comments={comments} />
+            add comment
           </WithLoader>
         </div>
       </div>
