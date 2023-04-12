@@ -29,6 +29,8 @@
 
 :global {
   .active {
+    cursor: default;
+    pointer-events: none;
     color: $active-font-color;
   }
 }

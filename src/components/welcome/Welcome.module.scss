@@ -1,0 +1,21 @@
+@import '@/styles/abstracts/variables';
+@import '@/styles/abstracts/placeholders';
+
+.welcome {
+  width: 100vw;
+  height: calc(100vh - 7.6rem);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  // .welcome__content
+  &__content {
+    @extend %font-upper;
+
+    padding: calc($gap * 3);
+    border-radius: $radius;
+    box-sizing: border-box;
+    color: $primary-font-color;
+    background-color: $secondary-bg-color;
+  }
+}
