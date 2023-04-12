@@ -17,6 +17,8 @@
     "baseUrl": "./src",
     "resolveJsonModule": true,
     "paths": {
+      "HOC/*": ["HOC/*"],
+      "hooks/*": ["hooks/*"],
       "types/*": ["types/*"],
       "redux/*": ["redux/*"],
       "icons/*": ["assets/icons/*"],

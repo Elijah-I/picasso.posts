@@ -4,11 +4,15 @@ import type { PostListProps } from 'types/posts.porps.types';
 import styles from './PostList.module.scss';
 
 const PostList = (props: PostListProps) => {
-  const { posts } = props;
+  const { posts, authors } = props;
   return (
     <div className={styles.list}>
       {posts.map((post) => (
-        <PostItem key={post.id} post={post} />
+        <PostItem
+          key={post.id}
+          post={post}
+          author={authors.find((author) => author.id === post.userId)}
+        />
       ))}
     </div>
   );
