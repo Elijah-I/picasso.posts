@@ -24,8 +24,8 @@ const router = createBrowserRouter(
     <Route path={home} element={<Layout />}>
       <Route index element={<Main />} />
       <Route path={`${home}/posts`} element={<Posts />} />
-      <Route path={`${home}/posts:id`} element={<Post />} />
-      <Route path="*" element={<Error />} />
+      <Route path={`${home}/posts/:id`} element={<Post />} />
+      <Route path="*" element={<Error message="Page not found" />} />
     </Route>
   )
 );

@@ -11,7 +11,7 @@ const PostList = (props: PostListProps) => {
         <PostItem
           key={post.id}
           post={post}
-          author={authors.find((author) => author.id === post.userId)}
+          author={authors.find((author) => author.id === post.userId)!}
         />
       ))}
     </div>
